@@ -15,7 +15,7 @@
           if (isValidRollNumber(rollNumber)) {
             // Construct the URL for the marksheet PDF
             //https://yuviyash1.github.io/100-S_GROUP/Data/Data1/ADMIT%20CAR%20%20(1).pdf
-            var marksheetURL = "https://yuviyash1.github.io/100-S_GROUP/Data/Data1/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
+            var marksheetURL = "/Data/Data1/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
             
             // Open the marksheet PDF in a new tab for download
             window.open(marksheetURL, "_blank");
@@ -33,7 +33,7 @@
     </script>
    </head>
   <body>
-    <h1>Download Marksheet</h1>
+    <h1>Download Admit Card</h1>
     <label for="rollNumber">Enter Roll Number:</label>
     <input type="text" id="rollNumber" required>
     <button type="button" onclick="downloadMarksheet()">Download</button>
