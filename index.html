@@ -13,33 +13,45 @@
           
           // Validate the roll number (you should implement your own validation logic)
           if ((rollNumber)<=900) {
-            // Construct the URL for the marksheet PDF
-            //https://yuviyash1.github.io/100-S_GROUP/Data/Data1/ADMIT%20CAR%20%20(1).pdf
             var marksheetURL = "/Data/Data1/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
             
-            // Open the marksheet PDF in a new tab for download
-            window.open(marksheetURL, "_blank");
+            var link = document.createElement("a");
+            link.href = marksheetURL;
+            link.download = "Admit Card Roll No " + rollNumber +".pdf";
+
+            // Append the link element to the document
+            document.body.appendChild(link);
+
+            // Trigger the download
+            link.click();
+
+            // Clean up the link element
+            document.body.removeChild(link);
+
+
+
+
+            //window.open(marksheetURL, "_blank");
           }else if ((rollNumber)<=1271) {
-            // Construct the URL for the marksheet PDF
-            //https://yuviyash1.github.io/100-S_GROUP/Data/Data1/ADMIT%20CAR%20%20(1).pdf
             var marksheetURL = "/Data/Data2/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
-            
-            // Open the marksheet PDF in a new tab for download
+           
+            var link = document.createElement("a");
+            link.href = marksheetURL;
+            link.download = "Admit Card Roll No " + rollNumber +".pdf";
+
+            // Append the link element to the document
+            document.body.appendChild(link);
+
+            // Trigger the download
+            link.click();
+
+            // Clean up the link element
+            document.body.removeChild(link);
             window.open(marksheetURL, "_blank");
           }else {
-            // Roll number is invalid
             alert("Invalid roll number. Please try again.");
           }
         }
-    
-       // function isValidRollNumber(rollNumber) {
-          // Implement your validation logic here
-          // Return true if the roll number is valid, false otherwise
-          // Example: return rollNumber === "123456";
-          ////var rollNumberr = parseInt(rollNumber, 10);
-  
-          // Check if the roll number is less than 1500
-          ////return rollNumber < 900;
        // }
     </script>
    </head>
