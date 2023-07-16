@@ -4,6 +4,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - 100's Group</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      
+      .container {
+        max-width: 400;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      .form-group label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      
+      .download-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .download-button:hover {
+        background-color: #45a049;
+      }
+
+      h1 {
+        text-align:center;
+      }
+
+    </style>
+
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
  
 
@@ -54,13 +114,31 @@
         }
        // }
     </script>
-   </head>
+
+  </head>
   <body>
-    <h1>Download Admit Card</h1>
+    
+
+
+    <div class="container">
+      <h2>Please Download Your Admit Card Below</h2>
+      <h1>Notice</h1>
+      <p>Take a printed version of the admit for use later and to show at the venue for the exam.<br>Attach Your PassportSize Photo in Admit card.
+        <br><br>The examination centers have been allocated based on the provinces. <br> Here are the details: <br>Birgunj - Birgunj Public College - 9809233871(Bikash Gupta) <br>Kathmandu - Advance College,kumaripati -9848406409 ( Jagdish Dhami) <br>Banke - Kohalpur College of HotelManagement - 9840884079 ( Niranjan Acharya) <br>Make sure to choose the appropriatecenter based on your province of residence. <br><br>(NOTE: please write your exam centre in your admit card that we mentioned above)<br>Bestwishes,</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Enter your Roll Number:</label>
+          <input type="text" id="rollNumber" placeholder="" required>
+        </div>
+        <button class="download-button" type="button" onclick="downloadMarksheet()">Download</button>
+      </form>
+    </div>
+
+
+    <!-- <h1>Download Admit Card</h1>
     <label for="rollNumber">Enter Roll Number:</label>
     <input type="text" id="rollNumber" required>
-    <button type="button" onclick="downloadMarksheet()">Download</button>
-
+    <button type="button" onclick="downloadMarksheet()">Download</button> -->
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
