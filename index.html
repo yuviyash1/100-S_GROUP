@@ -56,6 +56,23 @@
         background-color: #45a049;
       }
 
+      .view-button {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #1b4aef;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .view-button:hover {
+        background-color: #173fcd;
+      }
+
       h1 {
         text-align:center;
       }
@@ -129,7 +146,25 @@
             alert("Invalid roll number. Please try again.");
           }
         }
-       // }
+
+
+        function seeAdmitcard() {
+          var rollNumber = document.getElementById("rollNumber").value;
+          
+          // Validate the roll number (you should implement your own validation logic)
+          if ((rollNumber)<=900) {
+            var marksheetURL = "/100-S_GROUP/Data/Data1/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
+            window.open(marksheetURL, "_blank");
+          }else if ((rollNumber)<=1270 && (rollNumber)>900) {
+            var marksheetURL = "/100-S_GROUP/Data/Data2/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
+            window.open(marksheetURL, "_blank");
+          }else if ((rollNumber)>=1271 && (rollNumber)<1440) {
+            var marksheetURL = "/100-S_GROUP/Data/Data2/ADMIT%20CARD%20(" + rollNumber + ").pdf";
+            window.open(marksheetURL, "_blank");
+          }else {
+            alert("Invalid roll number. Please try again.");
+          }
+        }
     </script>
 
   </head>
@@ -148,6 +183,7 @@
           <input type="text" id="rollNumber" placeholder="" required>
         </div>
         <button class="download-button" type="button" onclick="downloadMarksheet()">Download</button>
+        <button class="view-button" type="button" onclick="seeAdmitcard()">View</button>
       </form>
     </div>
 
