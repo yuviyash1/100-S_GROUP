@@ -92,8 +92,25 @@
 
 
             //window.open(marksheetURL, "_blank");
-          }else if ((rollNumber)<=1271 && (rollNumber)>900) {
+          }else if ((rollNumber)<=1270 && (rollNumber)>900) {
             var marksheetURL = "/100-S_GROUP/Data/Data2/ADMIT%20CAR%20%20(" + rollNumber + ").pdf";
+           
+            var link = document.createElement("a");
+            link.href = marksheetURL;
+            link.download = "Admit Card Roll No " + rollNumber +".pdf";
+
+            // Append the link element to the document
+            document.body.appendChild(link);
+
+            // Trigger the download
+            link.click();
+
+            // Clean up the link element
+            document.body.removeChild(link);
+            //window.open(marksheetURL, "_blank");
+          }else if ((rollNumber)>=1271 && (rollNumber)<1440) {
+
+            var marksheetURL = "/100-S_GROUP/Data/Data2/ADMIT%20CARD%20(" + rollNumber + ").pdf";
            
             var link = document.createElement("a");
             link.href = marksheetURL;
