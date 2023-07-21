@@ -163,6 +163,8 @@
           }else if ((rollNumber)>=1271 && (rollNumber)<1599) {
             var marksheetURL = "/100-S_GROUP/Data/Data2/ADMIT%20CARD%20(" + rollNumber + ").pdf";
             window.open(marksheetURL, "_blank");
+          }else if ((rollNumber)==""){
+            alert("Roll number is not entered");
           }else {
             alert("Invalid roll number. Please try again.");
           }
